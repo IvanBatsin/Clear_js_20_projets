@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+/* Custom scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: rgb(179, 174, 174);
+  border-radius: 20px;
+  transition: .3s ease-in-out;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+:root {
+  --display-numbers: 'Open Sans', sans-serif;;
+}
+
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* background: linear-gradient(to right, #19547b, #ffd89b); */
+  background: whitesmoke;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.calculator {
+  width: 400px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 5px 25px -5px grey;
+}
+.calculator-display {
+  background-color: black;
+  color: white;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  letter-spacing: .5px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.calculator-display h1 {
+  margin: 0;
+  padding: 25px;
+  font-size: 45px;
+  font-family: var(--display-numbers);
+  overflow-x: auto; /* scroll bar if need */
+}
+.calculator-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  padding: 10px;
+}
+.calculator-buttons button {
+  min-height: 50px;
+  font-size: 20px;
+  font-weight: 100;
+  font-family: var(--display-numbers);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgb(202, 201, 201);
+  transition: all .2s ease-in-out;
+  outline: none;
+}
+.calculator-buttons button:hover {
+  background-color: rgb(240, 238, 147);
+}
+.calculator-buttons button:active {
+  background-color: rgb(231, 111, 63);
+  transform: translateY(2px);
+}
+.operator {
+  background-color: rgb(168, 166, 166) !important;
+  font: 30px;
+}
+.equal-sign {
+  grid-column: -2;
+  grid-row: 2 / span 4;
+  background-color: rgb(241, 208, 99) !important;
+  transition: background-color .4s ease;
+}
+.equal-sign:active {
+  background-color: rgb(231, 111, 63) !important;
+}
+.clear {
+  color: white;
+  background-color: rgb(231, 74, 63) !important;
+}
+.clear:active {
+  background-color: rgb(241, 208, 99) !important;
+} 
+
+@media screen and (max-width: 600px){
+  .calculator {
+    width: 95%;
+  }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spock Rock Game</title>
+  <link rel="icon" type="image/png" href="https://cdn3.iconfinder.com/data/icons/geek-3/24/Game_Over_sign_video_game-256.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+    <div class="header">
+      <h1>Rock Papper Scoissors Lizard Spock</h1>
+    </div>
+    <div class="player-container" id="player">
+      <h2>You - <span id="playerScore">0</span><span class="choise" id="playerChoise">
+        -- Choise
+      </span></h2>
+      <i class="far fa-hand-rock" id="rockPlayer" title="rock"></i>
+      <i class="far fa-hand-spock" id="spockPlayer" title="spock"></i>
+      <i class="far fa-hand-scissors" id="scissorsPlayer" title="scissors"></i>
+      <i class="far fa-hand-lizard" id="lizardPlayer" title="lizard"></i>
+      <i class="far fa-hand-paper" id="paperPlayer" title="paper"></i>
+    </div>
+
+    <div class="player-container" id="computer">
+      <h2>Computer - <span id="computerScore">0</span><span class="choise" id="computerChoise">
+        -- Choise
+      </span></h2>
+      <i class="far fa-hand-rock" id="rockComputer" title="rock"></i>
+      <i class="far fa-hand-spock" id="spockComputer" title="spock"></i>
+      <i class="far fa-hand-scissors" id="scissorsComputer" title="scissors"></i>
+      <i class="far fa-hand-lizard" id="lizardComputer" title="lizard"></i>
+      <i class="far fa-hand-paper" id="paperComputer" title="paper"></i>
+    </div>
+    <i class="fas fa-trash-alt reset-icon" title="Reset" id="reset"></i>
+    <div class="result-container">
+      <h3 class="result-text" id="resultText">You won!!</h3>
+    </div>
+  </div>
+  <script type="module" src="main.js"></script>
+</body>
+</html>

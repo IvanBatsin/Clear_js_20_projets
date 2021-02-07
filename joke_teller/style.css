@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #45badd;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: url('./robot.gif');
+  background-position: left center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#button {
+  cursor: pointer;
+  outline: none;
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  background: #ff3482;
+  font-size: 20px;
+  border: 1px solid fuchsia;
+  color: white;
+  font-weight: 600;
+  box-shadow: 3px 3px 5px 2px rgba(0, 0, 0, 0.3);
+}
+#button:hover {
+  filter: brightness(95%);
+}
+#button:active {
+  transform: scale(0.97);
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);;
+}
+#button:disabled {
+  filter: brightness(30%);
+  cursor: default;
+}
+
+@media screen and (max-width: 1000px){
+  .container {
+    background-size: cover;
+    background-position: center center;
+  }
+  #button {
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
+  }
+}
